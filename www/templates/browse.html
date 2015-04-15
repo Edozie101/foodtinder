@@ -1,0 +1,22 @@
+<ion-pane ng-controller="AppCtrl">
+
+      <td-cards>
+                  <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+                  on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
+                  on-partial-swipe="cardPartialSwipe(amt)" >
+                      <div class="title">
+                        {{card.title}}
+
+                         <img src="{{card.logo}}" class='icon'  />
+                      </div>
+                      <div class="image">
+                          <div class="no-text overlayBox"><div class="noBox boxed">Pass</div></div>
+                          <img src="{{card.image}}">
+                          <div class="price-text overlayBoxPrice"> <div class="priceBox">{{card.price}}</div></div>
+                          <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Yum!</div></div>
+                      </div>
+                  </td-card>
+
+
+     </td-cards>
+</ion-pane>
